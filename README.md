@@ -1,4 +1,4 @@
-# Demonstação do Autograder para Projetos Web
+# Demonstração do Autograder para Projetos Web
 
 Este repositório demonstra como configurar e usar o Autograder da WebTech Network em um fluxo de correção automatizada com GitHub Actions.
 
