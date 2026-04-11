@@ -81,13 +81,13 @@ O arquivo `.github/autograder/criteria.json` define uma árvore de avaliação c
 ### Estrutura de pesos do exemplo
 
 - `base` (100)
-- `semana_5` (30)
-- `semana_6` (30)
-- `semana_7` (40)
+- `semana_1` (30)
+- `semana_2` (30)
+- `semana_3` (40)
 
 Cada semana contém sub-blocos com pesos próprios e testes específicos.
 
-### Semana 5 (HTML + CSS)
+### Semana 1 (HTML + CSS)
 
 - HTML (60 dentro da semana)
 - CSS (40 dentro da semana)
@@ -100,14 +100,14 @@ Exemplos de testes usados:
 - `check_media_queries` e `check_flexbox_usage`
 - `has_style` (contagem de propriedades como `font-size`, `margin`, `padding`)
 
-### Semana 6 (Bootstrap + documentação)
+### Semana 2 (Bootstrap + Documentação)
 
 Exemplos de testes usados:
 
 - `has_class` para verificar classes como `container`, `form-container`, `card`
 - `check_project_structure` para validar estrutura esperada (ex.: `submission/README.md`)
 
-### Semana 7 (JavaScript dinâmico)
+### Semana 3 (JavaScript dinâmico)
 
 Exemplos de testes usados:
 
