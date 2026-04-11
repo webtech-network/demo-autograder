@@ -276,7 +276,10 @@
                 "file": "all",
                 "name": "check_project_structure",
                 "parameters": [
-                  { "name": "expected_structure", "value": "submission/README.md" }
+                  {
+                    "name": "expected_structure",
+                    "value": "submission/README.md"
+                  }
                 ]
               }
             ]
@@ -322,13 +325,6 @@
                 "name": "has_no_js_framework",
                 "parameters": [
                   { "name": "html_file", "value": "submission/index.html" },
-                  { "name": "js_file", "value": "submission/app.js" }
-                ]
-              },
-              {
-                "file": "all",
-                "name": "has_no_js_framework",
-                "parameters": [
                   { "name": "js_file", "value": "submission/app.js" }
                 ]
               }

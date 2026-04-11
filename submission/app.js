@@ -50,10 +50,8 @@ function carregarNoticiasHome() {
     const card = document.createElement("article");
     card.className = "card";
 
-    const link = document.createElement("a");
-    link.href = `detalhes.html?id=${noticia.id}`;
-
-    link.innerHTML = `
+    const card_content = document.createElement("div");
+    card_content.innerHTML = `
             <img src="${noticia.imagem}" alt="Imagem da notícia: ${noticia.titulo}">
             <div class="card-content">
                 <h3>${noticia.titulo}</h3>
@@ -61,7 +59,7 @@ function carregarNoticiasHome() {
             </div>
         `;
 
-    card.appendChild(link);
+    card.appendChild(card_content);
     container.appendChild(card);
   });
 }
