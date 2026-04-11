@@ -12,17 +12,17 @@ jobs:
   grading:
     permissions: write-all
     runs-on: ubuntu-latest
-    if: github.actor != 'github-classroom[bot]' 
+    if: github.actor != 'github-classroom[bot]'
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-           path: submission
+          path: submission
 
       - name: Run Autograder
         uses: webtech-network/autograder@main
-        with: 
-          template-preset : "webdev"
+        with:
+          template-preset: "webdev"
           feedback-type: "default"
           include-feedback: "true"
           openai-key: ${{ secrets.ENGINE }}
