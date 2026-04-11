@@ -107,10 +107,3 @@ h2 {
     border-top: 1px solid #eee;
     padding-top: 1rem;
 }
-
-/* Responsividade */
-@media (max-width: 768px) {
-    .card {
-        width: 100%;
-    }
-}

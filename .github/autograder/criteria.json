@@ -68,7 +68,7 @@
                     "name": "has_tag",
                     "parameters": [
                       { "name": "tag", "value": "div" },
-                      { "name": "required_count", "value": 4 }
+                      { "name": "required_count", "value": 1 }
                     ]
                   },
                   {
@@ -100,7 +100,7 @@
                     "name": "has_attribute",
                     "parameters": [
                       { "name": "attribute", "value": "class" },
-                      { "name": "required_count", "value": 2 }
+                      { "name": "required_count", "value": 3 }
                     ]
                   }
                 ]
@@ -227,6 +227,17 @@
                   {
                     "name": "class_names",
                     "value": ["form-container"]
+                  },
+                  { "name": "required_count", "value": 1 }
+                ]
+              },
+               {
+                "file": "submission/index.html",
+                "name": "has_class",
+                "parameters": [
+                  {
+                    "name": "class_names",
+                    "value": ["card"]
                   },
                   { "name": "required_count", "value": 1 }
                 ]

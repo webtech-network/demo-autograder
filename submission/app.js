@@ -38,7 +38,6 @@ const dados = [
 ];
 
 document.addEventListener("DOMContentLoaded", () => {
-  // Verifica em qual página estamos
   if (document.getElementById("noticias-container")) {
     carregarNoticiasHome();
   } else if (document.getElementById("detalhe-noticia-container")) {
@@ -72,7 +71,6 @@ function carregarNoticiasHome() {
 function carregarDetalheNoticia() {
   const container = document.querySelector("#detalhe-noticia-container");
 
-  // Pega o ID da query string da URL
   const params = new URLSearchParams(window.location.search);
   const noticiaId = parseInt(params.get("id"));
 
