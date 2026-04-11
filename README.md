@@ -1,233 +1,114 @@
-# Demonstração do Autograder para Projetos Web
+# Autograder for Web Projects
 
-Este repositório demonstra como configurar e usar o Autograder da WebTech Network em um fluxo de correção automatizada com GitHub Actions.
+Demonstration of the Autograder to automatically evaluate student code with GitHub Actions and criteria-oriented feedback.
 
-Link da ferramenta: https://github.com/webtech-network/autograder
+[Autograder WebTech](https://github.com/webtech-network/autograder) | [Criteria](docs/criteria.md) | [Feedback](docs/feedback.md) | [Workflow](docs/workflow-classroom.md)
 
-## Objetivo do Projeto
+---
 
-Este projeto separa claramente:
+## Table of Contents
 
-- O que o aluno entrega (pasta `submission/`)
-- Como a correção é definida (`.github/autograder/criteria.json`)
-- Como o feedback é exibido (`.github/autograder/feedback.json`)
-- Como tudo é executado automaticamente (`.github/workflows/classroom.yml`)
+- [Autograder for Web Projects](#autograder-for-web-projects)
+  - [Table of Contents](#table-of-contents)
+  - [Quick Start](#quick-start)
+  - [About the Project](#about-the-project)
+  - [Repository Architecture](#repository-architecture)
+  - [Evaluation Flow](#evaluation-flow)
+  - [Detailed Documentation](#detailed-documentation)
+  - [Practical Usage](#practical-usage)
+    - [When you want to change what is evaluated](#when-you-want-to-change-what-is-evaluated)
+    - [When you want to change how the result is shown](#when-you-want-to-change-how-the-result-is-shown)
+    - [When you want to change when/how it runs](#when-you-want-to-change-whenhow-it-runs)
+  - [Quick Troubleshooting](#quick-troubleshooting)
+  - [Summary](#summary)
 
-Com isso, você consegue evoluir critérios de correção sem alterar o código do aluno e manter o processo reprodutível em push e pull request.
+---
 
-## Estrutura do Repositório
+## Quick Start
 
-```text
-.
-├── .github/
-│   ├── autograder/
-│   │   ├── criteria.json
-│   │   ├── feedback.json
-│   │   └── setup.json
-│   └── workflows/
-│       └── classroom.yml
-├── submission/
-│   ├── app.js
-│   ├── index.html
-│   └── styles.css
-├── relatorio.md
-└── README.md
-```
+1. Edit the student files in `submission/`.
+2. Adjust criteria in `.github/autograder/criteria.json` when needed.
+3. Configure feedback display in `.github/autograder/feedback.json`.
+4. Push or open a PR to `main`.
+5. Check the `Autograder` workflow execution in GitHub Actions.
 
-### Papel de Cada Parte
+> Important: test paths must follow the pattern `submission/file.ext`.
 
-- `submission/`: representa os arquivos enviados pelo aluno.
-- `.github/autograder/criteria.json`: define pesos, blocos e testes da avaliação.
-- `.github/autograder/feedback.json`: define como o relatório final será apresentado.
-- `.github/workflows/classroom.yml`: executa o autograder no GitHub Actions.
-- `.github/autograder/setup.json`: arquivo de setup adicional (neste demo, não está sendo usado ativamente no fluxo).
+---
 
-## Como o Autograder é Executado Neste Repositório
+## About the Project
 
-O workflow em `.github/workflows/classroom.yml` dispara quando ocorre:
+This repository is a demonstration of automated evaluation for web projects. The goal is to clearly separate:
 
-- `push` na branch `main`
-- `pull_request` para `main`
-- execução manual com `workflow_dispatch`
+- student-submitted code;
+- evaluation rules;
+- feedback policy;
+- automated execution pipeline.
 
-Trecho central do workflow:
+With this separation, you can evolve the rubric without directly modifying submission code.
 
-```yaml
-- name: Run Autograder
-	uses: webtech-network/autograder@main
-	with:
-		template-preset: "webdev"
-		feedback-type: "default"
-		include-feedback: "true"
-		openai-key: ${{ secrets.ENGINE }}
-```
+## Repository Architecture
 
-### O que cada parâmetro faz
+| Component                          | Function                                                                    |
+| ---------------------------------- | --------------------------------------------------------------------------- |
+| `submission/`                      | Files submitted by the student (`index.html`, `styles.css`, `app.js`, etc.) |
+| `.github/autograder/criteria.json` | Defines weights, blocks, and evaluation tests                               |
+| `.github/autograder/feedback.json` | Defines how the result will be displayed                                    |
+| `.github/workflows/classroom.yml`  | Triggers and runs the autograder on GitHub Actions                          |
+| `.github/autograder/setup.json`    | Additional setup file (not used in the current flow)                        |
 
-- `template-preset: "webdev"`: usa a biblioteca de testes voltada para desenvolvimento web.
-- `feedback-type: "default"`: seleciona o tipo de feedback padrão.
-- `include-feedback: "true"`: publica feedback no resultado da execução.
-- `openai-key`: chave do secret usada para recursos de feedback com IA.
+---
 
-Observação importante:
+## Evaluation Flow
 
-- Os caminhos usados em `criteria.json` devem apontar para arquivos em `submission/...`.
-- Exemplo correto: `submission/index.html`.
+1. A CI event happens (`push`, `pull_request`, or `workflow_dispatch`).
+2. The workflow in `.github/workflows/classroom.yml` starts the `grading` job.
+3. The `webtech-network/autograder@main` action runs the tests defined in `criteria.json`.
+4. The final result is presented according to `feedback.json`.
 
-## Como os Critérios de Correção Estão Organizados (`criteria.json`)
+> Attention: the workflow uses `openai-key: ${{ secrets.ENGINE }}`. Make sure this secret exists in the repository.
 
-O arquivo `.github/autograder/criteria.json` define uma árvore de avaliação com pesos.
+---
 
-### Estrutura de pesos do exemplo
+## Detailed Documentation
 
-- `base` (100)
-- `semana_1` (30)
-- `semana_2` (30)
-- `semana_3` (40)
+To go deeper into the configuration of each file:
 
-Cada semana contém sub-blocos com pesos próprios e testes específicos.
+- [docs/criteria.md](docs/criteria.md): rubric structure, weights, test types, and safe maintenance.
+- [docs/feedback.md](docs/feedback.md): result display strategy and feedback configurations.
+- [docs/workflow-classroom.md](docs/workflow-classroom.md): triggers, jobs, steps, and execution parameters.
 
-### Semana 1 (HTML + CSS)
+## Practical Usage
 
-- HTML (60 dentro da semana)
-- CSS (40 dentro da semana)
+### When you want to change what is evaluated
 
-Exemplos de testes usados:
+Edit `.github/autograder/criteria.json` and validate in a PR whether the tests represent the pedagogical objective.
 
-- `has_tag` (estrutura semântica: body, header, nav, main, article etc.)
-- `has_attribute` (ex.: presença de atributo `class`)
-- `check_css_linked` (verifica se CSS está vinculado ao HTML)
-- `check_media_queries` e `check_flexbox_usage`
-- `has_style` (contagem de propriedades como `font-size`, `margin`, `padding`)
+### When you want to change how the result is shown
 
-### Semana 2 (Bootstrap + Documentação)
+Edit `.github/autograder/feedback.json` (for example, to show or hide passed tests).
 
-Exemplos de testes usados:
+### When you want to change when/how it runs
 
-- `has_class` para verificar classes como `container`, `form-container`, `card`
-- `check_project_structure` para validar estrutura esperada (ex.: `submission/README.md`)
+Edit `.github/workflows/classroom.yml` to adjust triggers, permissions, or action parameters.
 
-### Semana 3 (JavaScript dinâmico)
+---
 
-Exemplos de testes usados:
+## Quick Troubleshooting
 
-- `js_uses_dom_manipulation` (métodos como `createElement`, `appendChild`, `innerHTML`, `querySelector`)
-- `js_uses_query_string_parsing`
-- `has_no_js_framework` (garante uso de JS sem framework)
+- Workflow did not generate feedback: confirm that the `ENGINE` secret is configured.
+- Tests fail for no apparent reason: review paths in `criteria.json` for `submission/...`.
+- Rule change was not reflected: verify that the executed workflow is the latest one from the branch.
 
-## Como Configurar as Correções em `criteria.json`
+---
 
-Esta é a seção principal para manutenção da regra de avaliação.
+## Summary
 
-### 1) Entenda a hierarquia
+This repository exemplifies an ideal scenario for running the Autograder for web activities:
 
-Cada nó pode ter:
+- `submission/` contains the submission;
+- `criteria.json` defines the grading;
+- `feedback.json` defines the presentation;
+- `classroom.yml` runs everything in CI.
 
-- `subject_name`
-- `weight`
-- `subjects` (subníveis)
-- `tests` (testes executáveis)
-
-Se você alterar pesos, revise o impacto no resultado final.
-
-### 2) Use o tipo de teste correto
-
-Alguns testes têm parâmetros diferentes:
-
-- `has_tag` costuma usar `required_count`
-- `has_style` usa `count`
-- `has_class` usa `class_names` como lista
-
-Exemplo:
-
-```json
-{
-  "file": "submission/index.html",
-  "name": "has_class",
-  "parameters": [
-    { "name": "class_names", "value": ["container"] },
-    { "name": "required_count", "value": 1 }
-  ]
-}
-```
-
-### 3) Sempre valide caminhos de arquivos
-
-Referencie os arquivos como `submission/arquivo.ext`.
-
-Correto:
-
-```json
-{ "file": "submission/styles.css", "name": "check_media_queries" }
-```
-
-Evite caminhos incompletos ou fora dessa convenção.
-
-### 4) Exemplo de adição de novo teste
-
-Para exigir uma nova tag no HTML:
-
-```json
-{
-  "file": "submission/index.html",
-  "name": "has_tag",
-  "parameters": [
-    { "name": "tag", "value": "section" },
-    { "name": "required_count", "value": 1 }
-  ]
-}
-```
-
-## Como Configurar o Feedback em `feedback.json`
-
-Arquivo: `.github/autograder/feedback.json`
-
-Configuração atual:
-
-```json
-{
-  "general": {
-    "show_score": true,
-    "show_passed_tests": false,
-    "add_report_summary": true
-  },
-  "default": {}
-}
-```
-
-### Significado dos campos
-
-- `show_score: true`
-  - Exibe a pontuação final para o aluno.
-
-- `show_passed_tests: false`
-  - Não lista testes que já passaram.
-  - O feedback fica focado nas falhas.
-
-- `add_report_summary: true`
-  - Inclui um resumo geral da avaliação.
-
-- `default: {}`
-  - Espaço para configuração padrão adicional por tipo de feedback.
-
-### Quando mudar essas opções
-
-- Em fase de aprendizagem inicial, pode ser útil ativar `show_passed_tests: true`.
-- Em fase de avaliação somativa, manter `false` reduz ruído e direciona melhoria.
-
-## Fluxo Prático de Uso
-
-1. O aluno altera arquivos em `submission/`.
-2. O push ou pull request aciona o workflow.
-3. O Autograder lê `criteria.json` e executa os testes.
-4. O relatório final usa as regras de `feedback.json`.
-5. A nota e o feedback ficam disponíveis na execução do GitHub Actions.
-
-## Resumo
-
-Este repositório exemplifica um cenário ideal para execução do Autograder para atividades web:
-
-- Critérios técnicos e pesos em `.github/autograder/criteria.json`
-- Política de feedback em `.github/autograder/feedback.json`
-- Execução automática em `.github/workflows/classroom.yml`
-- Entrega do aluno em `submission/`
+For day-to-day operation, use this README as a quick entry point and the files in `docs/` as in-depth reference.

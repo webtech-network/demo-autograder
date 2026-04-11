@@ -1,65 +1,65 @@
-const dados = [
+const newsData = [
   {
     id: 1,
-    titulo: "Prefeitura Lança Novo Plano de Mobilidade Urbana",
-    descricao:
-      "Novo plano visa melhorar o transporte público e reduzir o trânsito na cidade.",
-    conteudo:
-      "A Prefeitura apresentou nesta segunda-feira um novo plano de mobilidade urbana que inclui a criação de corredores exclusivos de ônibus, ciclovias e a requalificação de vias principais. O projeto será implementado ao longo dos próximos dois anos e promete revolucionar a forma como os cidadãos se locomovem.",
-    categoria: "Cidades",
-    autor: "Joana Ribeiro",
-    data: "2025-03-30",
-    imagem: "imgs/mobilidade.jpg",
+    title: "City Hall Launches New Urban Mobility Plan",
+    description:
+      "The new plan aims to improve public transportation and reduce city traffic.",
+    content:
+      "City Hall introduced a new urban mobility plan this Monday, including exclusive bus lanes, bike paths, and major road upgrades. The project will be implemented over the next two years and promises to transform how citizens move around the city.",
+    category: "Cities",
+    author: "Joana Ribeiro",
+    date: "2025-03-30",
+    image: "imgs/mobilidade.jpg",
   },
   {
     id: 2,
-    titulo: "Tecnologia 6G Está em Desenvolvimento",
-    descricao:
-      "Pesquisadores anunciam avanços na próxima geração de redes móveis.",
-    conteudo:
-      "Universidades e empresas de telecomunicação já estão testando tecnologias que poderão compor a infraestrutura do 6G. A expectativa é que a nova geração seja 100 vezes mais rápida que o 5G e amplie a integração entre dispositivos inteligentes, permitindo avanços significativos em áreas como carros autônomos e Internet das Coisas.",
-    categoria: "Tecnologia",
-    autor: "Carlos Mendes",
-    data: "2025-03-28",
-    imagem: "imgs/tecnologia_6g.jpg",
+    title: "6G Technology Is Under Development",
+    description:
+      "Researchers announce progress in the next generation of mobile networks.",
+    content:
+      "Universities and telecom companies are already testing technologies that may form the infrastructure of 6G. Expectations are that the new generation will be 100 times faster than 5G and will expand integration between smart devices, enabling major advances in areas such as autonomous cars and the Internet of Things.",
+    category: "Technology",
+    author: "Carlos Mendes",
+    date: "2025-03-28",
+    image: "imgs/tecnologia_6g.jpg",
   },
   {
     id: 3,
-    titulo: "Festival de Música Reúne Mais de 50 Mil Pessoas",
-    descricao:
-      "Evento cultural movimentou o final de semana com atrações nacionais e internacionais.",
-    conteudo:
-      "Durante três dias de programação, o festival contou com a participação de mais de 40 artistas e promoveu atividades culturais e gastronômicas em paralelo. A prefeitura estima um impacto positivo no turismo local, com hotéis e restaurantes operando com capacidade máxima.",
-    categoria: "Cultura",
-    autor: "Ana Clara Silva",
-    data: "2025-03-27",
-    imagem: "imgs/festival_musica.jpg",
+    title: "Music Festival Draws More Than 50,000 People",
+    description:
+      "The cultural event energized the weekend with national and international acts.",
+    content:
+      "Over three days of programming, the festival featured more than 40 artists and promoted parallel cultural and food activities. City Hall estimates a positive impact on local tourism, with hotels and restaurants operating at full capacity.",
+    category: "Culture",
+    author: "Ana Clara Silva",
+    date: "2025-03-27",
+    image: "imgs/festival_musica.jpg",
   },
 ];
 
 document.addEventListener("DOMContentLoaded", () => {
-  if (document.getElementById("noticias-container")) {
-    carregarNoticiasHome();
+  if (document.getElementById("news-container")) {
+    loadHomeNews();
   }
 });
 
-function carregarNoticiasHome() {
-  const container = document.getElementById("noticias-container");
+function loadHomeNews() {
+  const container = document.getElementById("news-container");
 
-  dados.forEach((noticia) => {
+  newsData.forEach((article) => {
     const card = document.createElement("article");
     card.className = "card";
 
-    const card_content = document.createElement("div");
-    card_content.innerHTML = `
-            <img src="${noticia.imagem}" alt="Imagem da notícia: ${noticia.titulo}">
+    const cardContent = document.createElement("div");
+    cardContent.innerHTML = `
+            <img src="${article.image}" alt="News image: ${article.title}">
             <div class="card-content">
-                <h3>${noticia.titulo}</h3>
-                <p>${noticia.descricao}</p>
+                <h3>${article.title}</h3>
+                <p>${article.description}</p>
             </div>
         `;
 
-    card.appendChild(card_content);
+    card.appendChild(cardContent);
     container.appendChild(card);
   });
 }
