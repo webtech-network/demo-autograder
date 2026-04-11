@@ -374,7 +374,10 @@
                 "file": "submission/index.html",
                 "name": "has_attribute",
                 "parameters": [
-                  { "name": "attribute", "value": "author" },
+                  {
+                    "name": "attribute_names",
+                    "value": ["author"]
+                  },
                   { "name": "required_count", "value": 1 }
                 ]
               },
@@ -382,7 +385,10 @@
                 "file": "submission/index.html",
                 "name": "has_attribute",
                 "parameters": [
-                  { "name": "attribute", "value": "description" },
+                  {
+                    "name": "attribute_names",
+                    "value": ["description"]
+                  },
                   { "name": "required_count", "value": 1 }
                 ]
               },
@@ -390,7 +396,10 @@
                 "file": "submission/index.html",
                 "name": "has_attribute",
                 "parameters": [
-                  { "name": "attribute", "value": "keywords" },
+                  {
+                    "name": "attribute_names",
+                    "value": ["keywords"]
+                  },
                   { "name": "required_count", "value": 1 }
                 ]
               }
