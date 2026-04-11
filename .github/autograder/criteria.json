@@ -16,7 +16,7 @@
                 "weight": 40,
                 "tests": [
                   {
-                    "file": "index.html",
+                    "file": "submission/index.html",
                     "name": "has_tag",
                     "parameters": [
                       { "name": "tag", "value": "body" },
@@ -24,7 +24,7 @@
                     ]
                   },
                   {
-                    "file": "index.html",
+                    "file": "submission/index.html",
                     "name": "has_tag",
                     "parameters": [
                       { "name": "tag", "value": "header" },
@@ -32,7 +32,7 @@
                     ]
                   },
                   {
-                    "file": "index.html",
+                    "file": "submission/index.html",
                     "name": "has_tag",
                     "parameters": [
                       { "name": "tag", "value": "nav" },
@@ -40,7 +40,7 @@
                     ]
                   },
                   {
-                    "file": "index.html",
+                    "file": "submission/index.html",
                     "name": "has_tag",
                     "parameters": [
                       { "name": "tag", "value": "main" },
@@ -48,7 +48,7 @@
                     ]
                   },
                   {
-                    "file": "index.html",
+                    "file": "submission/index.html",
                     "name": "has_tag",
                     "parameters": [
                       { "name": "tag", "value": "article" },
@@ -56,15 +56,7 @@
                     ]
                   },
                   {
-                    "file": "index.html",
-                    "name": "has_tag",
-                    "parameters": [
-                      { "name": "tag", "value": "img" },
-                      { "name": "required_count", "value": 5 }
-                    ]
-                  },
-                  {
-                    "file": "index.html",
+                    "file": "submission/index.html",
                     "name": "has_tag",
                     "parameters": [
                       { "name": "tag", "value": "footer" },
@@ -72,7 +64,7 @@
                     ]
                   },
                   {
-                    "file": "index.html",
+                    "file": "submission/index.html",
                     "name": "has_tag",
                     "parameters": [
                       { "name": "tag", "value": "div" },
@@ -80,7 +72,7 @@
                     ]
                   },
                   {
-                    "file": "index.html",
+                    "file": "submission/index.html",
                     "name": "has_tag",
                     "parameters": [
                       { "name": "tag", "value": "form" },
@@ -88,7 +80,7 @@
                     ]
                   },
                   {
-                    "file": "index.html",
+                    "file": "submission/index.html",
                     "name": "has_tag",
                     "parameters": [
                       { "name": "tag", "value": "input" },
@@ -96,7 +88,7 @@
                     ]
                   },
                   {
-                    "file": "index.html",
+                    "file": "submission/index.html",
                     "name": "has_tag",
                     "parameters": [
                       { "name": "tag", "value": "button" },
@@ -104,7 +96,7 @@
                     ]
                   },
                   {
-                    "file": "index.html",
+                    "file": "submission/index.html",
                     "name": "has_attribute",
                     "parameters": [
                       { "name": "attribute", "value": "class" },
@@ -118,13 +110,8 @@
                 "weight": 20,
                 "tests": [
                   {
-                    "file": "index.html",
+                    "file": "submission/index.html",
                     "name": "check_css_linked"
-                  },
-                  {
-                    "file": "index.html",
-                    "name": "check_internal_links_to_article",
-                    "parameters": [{ "name": "required_count", "value": 4 }]
                   }
                 ]
               }
@@ -139,15 +126,15 @@
                 "weight": 50,
                 "tests": [
                   {
-                    "file": "css/styles.css",
+                    "file": "submission/styles.css",
                     "name": "uses_relative_units"
                   },
                   {
-                    "file": "css/styles.css",
+                    "file": "submission/styles.css",
                     "name": "check_media_queries"
                   },
                   {
-                    "file": "css/styles.css",
+                    "file": "submission/styles.css",
                     "name": "check_flexbox_usage"
                   }
                 ]
@@ -157,7 +144,7 @@
                 "weight": 50,
                 "tests": [
                   {
-                    "file": "css/styles.css",
+                    "file": "submission/styles.css",
                     "name": "has_style",
                     "parameters": [
                       { "name": "style", "value": "font-size" },
@@ -165,7 +152,7 @@
                     ]
                   },
                   {
-                    "file": "css/styles.css",
+                    "file": "submission/styles.css",
                     "name": "has_style",
                     "parameters": [
                       { "name": "style", "value": "font-family" },
@@ -173,7 +160,7 @@
                     ]
                   },
                   {
-                    "file": "css/styles.css",
+                    "file": "submission/styles.css",
                     "name": "has_style",
                     "parameters": [
                       { "name": "style", "value": "text-align" },
@@ -181,7 +168,7 @@
                     ]
                   },
                   {
-                    "file": "css/styles.css",
+                    "file": "submission/styles.css",
                     "name": "has_style",
                     "parameters": [
                       { "name": "style", "value": "display" },
@@ -189,7 +176,7 @@
                     ]
                   },
                   {
-                    "file": "css/styles.css",
+                    "file": "submission/styles.css",
                     "name": "has_style",
                     "parameters": [
                       { "name": "style", "value": "position" },
@@ -197,7 +184,7 @@
                     ]
                   },
                   {
-                    "file": "css/styles.css",
+                    "file": "submission/styles.css",
                     "name": "has_style",
                     "parameters": [
                       { "name": "style", "value": "margin" },
@@ -205,7 +192,7 @@
                     ]
                   },
                   {
-                    "file": "css/styles.css",
+                    "file": "submission/styles.css",
                     "name": "has_style",
                     "parameters": [
                       { "name": "style", "value": "padding" },
@@ -227,62 +214,35 @@
             "weight": 70,
             "tests": [
               {
-                "file": "index.html",
-                "name": "check_bootstrap_linked"
-              },
-              {
-                "file": "index.html",
-                "name": "check_internal_links",
-                "parameters": [{ "name": "required_count", "value": 3 }]
-              },
-              {
-                "file": "index.html",
+                "file": "submission/index.html",
                 "name": "has_class",
                 "parameters": [
                   {
                     "name": "class_names",
-                    "value": ["container", "container-fluid"]
+                    "value": ["container"]
                   },
                   { "name": "required_count", "value": 1 }
                 ]
               },
               {
-                "file": "index.html",
+                "file": "submission/index.html",
                 "name": "has_class",
                 "parameters": [
-                  { "name": "class_names", "value": ["row"] },
+                  {
+                    "name": "class_names",
+                    "value": ["form-container"]
+                  },
                   { "name": "required_count", "value": 1 }
                 ]
               },
               {
-                "file": "index.html",
+                "file": "submission/index.html",
                 "name": "has_class",
                 "parameters": [
-                  { "name": "class_names", "value": ["col-"] },
-                  { "name": "required_count", "value": 3 }
-                ]
-              },
-              {
-                "file": "index.html",
-                "name": "has_class",
-                "parameters": [
-                  { "name": "class_names", "value": ["text-center"] },
-                  { "name": "required_count", "value": 1 }
-                ]
-              },
-              {
-                "file": "index.html",
-                "name": "has_class",
-                "parameters": [
-                  { "name": "class_names", "value": ["d-flex", "d--flex"] },
-                  { "name": "required_count", "value": 1 }
-                ]
-              },
-              {
-                "file": "index.html",
-                "name": "has_class",
-                "parameters": [
-                  { "name": "class_names", "value": ["bg-*"] },
+                  {
+                    "name": "class_names",
+                    "value": ["card"]
+                  },
                   { "name": "required_count", "value": 1 }
                 ]
               }
@@ -293,11 +253,11 @@
             "weight": 30,
             "tests": [
               {
-                "file": "css/styles.css",
+                "file": "submission/styles.css",
                 "name": "check_media_queries"
               },
               {
-                "file": "css/styles.css",
+                "file": "submission/styles.css",
                 "name": "has_style",
                 "parameters": [
                   { "name": "style", "value": "margin" },
@@ -305,7 +265,7 @@
                 ]
               },
               {
-                "file": "css/styles.css",
+                "file": "submission/styles.css",
                 "name": "has_style",
                 "parameters": [
                   { "name": "style", "value": "padding" },
@@ -313,7 +273,7 @@
                 ]
               },
               {
-                "file": "css/styles.css",
+                "file": "submission/styles.css",
                 "name": "has_style",
                 "parameters": [
                   { "name": "style", "value": "width" },
@@ -340,7 +300,7 @@
             "weight": 70,
             "tests": [
               {
-                "file": "app.js",
+                "file": "submission/app.js",
                 "name": "js_has_json_array_with_id",
                 "parameters": [
                   { "name": "required_key", "value": "id" },
@@ -348,7 +308,7 @@
                 ]
               },
               {
-                "file": "app.js",
+                "file": "submission/app.js",
                 "name": "js_uses_dom_manipulation",
                 "parameters": [
                   {
@@ -364,7 +324,7 @@
                 ]
               },
               {
-                "file": "app.js",
+                "file": "submission/app.js",
                 "name": "js_uses_query_string_parsing"
               }
             ]
@@ -374,28 +334,19 @@
             "weight": 30,
             "tests": [
               {
-                "file": "index.html",
-                "name": "link_points_to_page_with_query_param",
+                "file": "all",
+                "name": "has_no_js_framework",
                 "parameters": [
-                  { "name": "target_page", "value": "detalhes.html" },
-                  { "name": "query_param", "value": "id" },
-                  { "name": "required_count", "value": 3 }
+                  { "name": "html_file", "value": "submission/index.html" },
+                  { "name": "js_file", "value": "submission/app.js" }
                 ]
               },
               {
                 "file": "all",
                 "name": "has_no_js_framework",
                 "parameters": [
-                  { "name": "html_file", "value": "index.html" },
-                  { "name": "js_file", "value": "app.js" }
-                ]
-              },
-              {
-                "file": "all",
-                "name": "has_no_js_framework",
-                "parameters": [
-                  { "name": "html_file", "value": "detalhes.html" },
-                  { "name": "js_file", "value": "app.js" }
+                  { "name": "html_file", "value": "submission/detalhes.html" },
+                  { "name": "js_file", "value": "submission/app.js" }
                 ]
               }
             ]

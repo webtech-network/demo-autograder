@@ -18,62 +18,98 @@
                   {
                     "file": "index.html",
                     "name": "has_tag",
-                    "parameters": [{"name": "tag", "value": "body"}, {"name": "required_count", "value": 1}]
+                    "parameters": [
+                      { "name": "tag", "value": "body" },
+                      { "name": "required_count", "value": 1 }
+                    ]
                   },
                   {
                     "file": "index.html",
                     "name": "has_tag",
-                    "parameters": [{"name": "tag", "value": "header"}, {"name": "required_count", "value": 1}]
+                    "parameters": [
+                      { "name": "tag", "value": "header" },
+                      { "name": "required_count", "value": 1 }
+                    ]
                   },
                   {
                     "file": "index.html",
                     "name": "has_tag",
-                    "parameters": [{"name": "tag", "value": "nav"}, {"name": "required_count", "value": 1}]
+                    "parameters": [
+                      { "name": "tag", "value": "nav" },
+                      { "name": "required_count", "value": 1 }
+                    ]
                   },
                   {
                     "file": "index.html",
                     "name": "has_tag",
-                    "parameters": [{"name": "tag", "value": "main"}, {"name": "required_count", "value": 1}]
+                    "parameters": [
+                      { "name": "tag", "value": "main" },
+                      { "name": "required_count", "value": 1 }
+                    ]
                   },
                   {
                     "file": "index.html",
                     "name": "has_tag",
-                    "parameters": [{"name": "tag", "value": "article"}, {"name": "required_count", "value": 4}]
+                    "parameters": [
+                      { "name": "tag", "value": "article" },
+                      { "name": "required_count", "value": 4 }
+                    ]
                   },
                   {
                     "file": "index.html",
                     "name": "has_tag",
-                    "parameters": [{"name": "tag", "value": "img"}, {"name": "required_count", "value": 5}]
+                    "parameters": [
+                      { "name": "tag", "value": "img" },
+                      { "name": "required_count", "value": 5 }
+                    ]
                   },
                   {
                     "file": "index.html",
                     "name": "has_tag",
-                    "parameters": [{"name": "tag", "value": "footer"}, {"name": "required_count", "value": 1}]
+                    "parameters": [
+                      { "name": "tag", "value": "footer" },
+                      { "name": "required_count", "value": 1 }
+                    ]
                   },
                   {
                     "file": "index.html",
                     "name": "has_tag",
-                    "parameters": [{"name": "tag", "value": "div"}, {"name": "required_count", "value": 1}]
+                    "parameters": [
+                      { "name": "tag", "value": "div" },
+                      { "name": "required_count", "value": 1 }
+                    ]
                   },
                   {
                     "file": "index.html",
                     "name": "has_tag",
-                    "parameters": [{"name": "tag", "value": "form"}, {"name": "required_count", "value": 1}]
+                    "parameters": [
+                      { "name": "tag", "value": "form" },
+                      { "name": "required_count", "value": 1 }
+                    ]
                   },
                   {
                     "file": "index.html",
                     "name": "has_tag",
-                    "parameters": [{"name": "tag", "value": "input"}, {"name": "required_count", "value": 1}]
+                    "parameters": [
+                      { "name": "tag", "value": "input" },
+                      { "name": "required_count", "value": 1 }
+                    ]
                   },
                   {
                     "file": "index.html",
                     "name": "has_tag",
-                    "parameters": [{"name": "tag", "value": "button"}, {"name": "required_count", "value": 1}]
+                    "parameters": [
+                      { "name": "tag", "value": "button" },
+                      { "name": "required_count", "value": 1 }
+                    ]
                   },
                   {
                     "file": "index.html",
                     "name": "has_attribute",
-                    "parameters": [{"name": "attribute", "value": "class"}, {"name": "required_count", "value": 2}]
+                    "parameters": [
+                      { "name": "attribute", "value": "class" },
+                      { "name": "required_count", "value": 2 }
+                    ]
                   }
                 ]
               },
@@ -88,7 +124,7 @@
                   {
                     "file": "index.html",
                     "name": "check_internal_links_to_article",
-                    "parameters": [{"name": "required_count", "value": 4}]
+                    "parameters": [{ "name": "required_count", "value": 4 }]
                   }
                 ]
               }
@@ -102,9 +138,9 @@
                 "subject_name": "responsivity",
                 "weight": 50,
                 "tests": [
-                  {"file": "css/styles.css", "name": "uses_relative_units"},
-                  {"file": "css/styles.css", "name": "check_media_queries"},
-                  {"file": "css/styles.css", "name": "check_flexbox_usage"}
+                  { "file": "styles.css", "name": "uses_relative_units" },
+                  { "file": "styles.css", "name": "check_media_queries" },
+                  { "file": "styles.css", "name": "check_flexbox_usage" }
                 ]
               },
               {
@@ -112,39 +148,60 @@
                 "weight": 50,
                 "tests": [
                   {
-                    "file": "css/styles.css",
+                    "file": "styles.css",
                     "name": "has_style",
-                    "parameters": [{"name": "style", "value": "font-size"}, {"name": "count", "value": 1}]
+                    "parameters": [
+                      { "name": "style", "value": "font-size" },
+                      { "name": "count", "value": 1 }
+                    ]
                   },
                   {
-                    "file": "css/styles.css",
+                    "file": "styles.css",
                     "name": "has_style",
-                    "parameters": [{"name": "style", "value": "font-family"}, {"name": "count", "value": 1}]
+                    "parameters": [
+                      { "name": "style", "value": "font-family" },
+                      { "name": "count", "value": 1 }
+                    ]
                   },
                   {
-                    "file": "css/styles.css",
+                    "file": "styles.css",
                     "name": "has_style",
-                    "parameters": [{"name": "style", "value": "text-align"}, {"name": "count", "value": 1}]
+                    "parameters": [
+                      { "name": "style", "value": "text-align" },
+                      { "name": "count", "value": 1 }
+                    ]
                   },
                   {
-                    "file": "css/styles.css",
+                    "file": "styles.css",
                     "name": "has_style",
-                    "parameters": [{"name": "style", "value": "display"}, {"name": "count", "value": 1}]
+                    "parameters": [
+                      { "name": "style", "value": "display" },
+                      { "name": "count", "value": 1 }
+                    ]
                   },
                   {
-                    "file": "css/styles.css",
+                    "file": "styles.css",
                     "name": "has_style",
-                    "parameters": [{"name": "style", "value": "position"}, {"name": "count", "value": 1}]
+                    "parameters": [
+                      { "name": "style", "value": "position" },
+                      { "name": "count", "value": 1 }
+                    ]
                   },
                   {
-                    "file": "css/styles.css",
+                    "file": "styles.css",
                     "name": "has_style",
-                    "parameters": [{"name": "style", "value": "margin"}, {"name": "count", "value": 1}]
+                    "parameters": [
+                      { "name": "style", "value": "margin" },
+                      { "name": "count", "value": 1 }
+                    ]
                   },
                   {
-                    "file": "css/styles.css",
+                    "file": "styles.css",
                     "name": "has_style",
-                    "parameters": [{"name": "style", "value": "padding"}, {"name": "count", "value": 1}]
+                    "parameters": [
+                      { "name": "style", "value": "padding" },
+                      { "name": "count", "value": 1 }
+                    ]
                   }
                 ]
               }
@@ -167,37 +224,58 @@
               {
                 "file": "index.html",
                 "name": "check_internal_links",
-                "parameters": [{"name": "required_count", "value": 3}]
+                "parameters": [{ "name": "required_count", "value": 3 }]
               },
               {
                 "file": "index.html",
                 "name": "has_class",
-                "parameters": [{"name": "classes", "value": ["container", "container-fluid"]}, {"name": "required_count", "value": 1}]
+                "parameters": [
+                  {
+                    "name": "classes",
+                    "value": ["container", "container-fluid"]
+                  },
+                  { "name": "required_count", "value": 1 }
+                ]
               },
               {
                 "file": "index.html",
                 "name": "has_class",
-                "parameters": [{"name": "classes", "value": ["row"]}, {"name": "required_count", "value": 1}]
+                "parameters": [
+                  { "name": "classes", "value": ["row"] },
+                  { "name": "required_count", "value": 1 }
+                ]
               },
               {
                 "file": "index.html",
                 "name": "has_class",
-                "parameters": [{"name": "classes", "value": ["col-*"]}, {"name": "required_count", "value": 3}]
+                "parameters": [
+                  { "name": "classes", "value": ["col-*"] },
+                  { "name": "required_count", "value": 3 }
+                ]
               },
               {
                 "file": "index.html",
                 "name": "has_class",
-                "parameters": [{"name": "classes", "value": ["text-center"]}, {"name": "required_count", "value": 1}]
+                "parameters": [
+                  { "name": "classes", "value": ["text-center"] },
+                  { "name": "required_count", "value": 1 }
+                ]
               },
               {
                 "file": "index.html",
                 "name": "has_class",
-                "parameters": [{"name": "classes", "value": ["d-flex", "d-*-flex"]}, {"name": "required_count", "value": 1}]
+                "parameters": [
+                  { "name": "classes", "value": ["d-flex", "d-*-flex"] },
+                  { "name": "required_count", "value": 1 }
+                ]
               },
               {
                 "file": "index.html",
                 "name": "has_class",
-                "parameters": [{"name": "classes", "value": ["bg-*"]}, {"name": "required_count", "value": 1}]
+                "parameters": [
+                  { "name": "classes", "value": ["bg-*"] },
+                  { "name": "required_count", "value": 1 }
+                ]
               }
             ]
           },
@@ -206,28 +284,39 @@
             "weight": 30,
             "tests": [
               {
-                "file": "css/styles.css",
+                "file": "styles.css",
                 "name": "check_media_queries"
               },
               {
-                "file": "css/styles.css",
+                "file": "styles.css",
                 "name": "has_style",
-                "parameters": [{"name": "style", "value": "margin"}, {"name": "count", "value": 1}]
+                "parameters": [
+                  { "name": "style", "value": "margin" },
+                  { "name": "count", "value": 1 }
+                ]
               },
               {
-                "file": "css/styles.css",
+                "file": "styles.css",
                 "name": "has_style",
-                "parameters": [{"name": "style", "value": "padding"}, {"name": "count", "value": 1}]
+                "parameters": [
+                  { "name": "style", "value": "padding" },
+                  { "name": "count", "value": 1 }
+                ]
               },
               {
-                "file": "css/styles.css",
+                "file": "styles.css",
                 "name": "has_style",
-                "parameters": [{"name": "style", "value": "width"}, {"name": "count", "value": 1}]
+                "parameters": [
+                  { "name": "style", "value": "width" },
+                  { "name": "count", "value": 1 }
+                ]
               },
               {
                 "file": "all",
                 "name": "check_project_structure",
-                "parameters": [{"name": "expected_structure", "value": "README.md"}]
+                "parameters": [
+                  { "name": "expected_structure", "value": "README.md" }
+                ]
               }
             ]
           }
@@ -244,12 +333,26 @@
               {
                 "file": "app.js",
                 "name": "js_has_json_array_with_id",
-                "parameters": [{"name": "property", "value": "id"}, {"name": "required_count", "value": 3}]
+                "parameters": [
+                  { "name": "property", "value": "id" },
+                  { "name": "required_count", "value": 3 }
+                ]
               },
               {
                 "file": "app.js",
                 "name": "js_uses_dom_manipulation",
-                "parameters": [{"name": "methods", "value": ["createElement", "appendChild", "innerHTML", "querySelector"]}, {"name": "required_count", "value": 4}]
+                "parameters": [
+                  {
+                    "name": "methods",
+                    "value": [
+                      "createElement",
+                      "appendChild",
+                      "innerHTML",
+                      "querySelector"
+                    ]
+                  },
+                  { "name": "required_count", "value": 4 }
+                ]
               },
               {
                 "file": "app.js",
@@ -264,17 +367,27 @@
               {
                 "file": "index.html",
                 "name": "link_points_to_page_with_query_param",
-                "parameters": [{"name": "target_page", "value": "detalhes.html"}, {"name": "param", "value": "id"}, {"name": "required_count", "value": 3}]
+                "parameters": [
+                  { "name": "target_page", "value": "detalhes.html" },
+                  { "name": "param", "value": "id" },
+                  { "name": "required_count", "value": 3 }
+                ]
               },
               {
                 "file": "all",
                 "name": "has_no_js_framework",
-                "parameters": [{"name": "html_file", "value": "index.html"}, {"name": "js_file", "value": "app.js"}]
+                "parameters": [
+                  { "name": "html_file", "value": "index.html" },
+                  { "name": "js_file", "value": "app.js" }
+                ]
               },
               {
                 "file": "all",
                 "name": "has_no_js_framework",
-                "parameters": [{"name": "html_file", "value": "detalhes.html"}, {"name": "js_file", "value": "app.js"}]
+                "parameters": [
+                  { "name": "html_file", "value": "detalhes.html" },
+                  { "name": "js_file", "value": "app.js" }
+                ]
               }
             ]
           }
