@@ -2,8 +2,8 @@
 
 ---
 ## GRADING SUMMARY
-- 📊 **Tests:** 33 total  
-  - ✅ 27 passed  
+- 📊 **Tests:** 32 total  
+  - ✅ 26 passed  
   - ❌ 6 failed
 
 ---
@@ -20,10 +20,11 @@
 - 🔴 **Score:** 0.0/100
 - 💬 **Error:** No use of media queries was found in your CSS.
 
-### 🧪 check_media_queries ❌
-- 📁 **File:** `submission/styles.css`
+### 🧪 check_project_structure ❌
+- 📁 **File:** `all`
 - 🔴 **Score:** 0.0/100
-- 💬 **Error:** No use of media queries was found in your CSS.
+- ⚙️ **Parameters:** `expected_structure=submission/README.md`
+- 💬 **Error:** The file 'submission/README.md' does not exist.
 
 ### 🧪 has_style ❌
 - 📁 **File:** `submission/styles.css`
@@ -46,4 +47,4 @@
 ---
 ## Final Score
 
-> **87.13 / 100**
+> **86.68 / 100**
