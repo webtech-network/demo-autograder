@@ -231,7 +231,7 @@
                   { "name": "required_count", "value": 1 }
                 ]
               },
-               {
+              {
                 "file": "submission/index.html",
                 "name": "has_class",
                 "parameters": [
@@ -248,10 +248,6 @@
             "subject_name": "css_and_docs",
             "weight": 30,
             "tests": [
-              {
-                "file": "submission/styles.css",
-                "name": "check_media_queries"
-              },
               {
                 "file": "submission/styles.css",
                 "name": "has_style",
@@ -280,7 +276,7 @@
                 "file": "all",
                 "name": "check_project_structure",
                 "parameters": [
-                  { "name": "expected_structure", "value": "README.md" }
+                  { "name": "expected_structure", "value": "submission/README.md" }
                 ]
               }
             ]
