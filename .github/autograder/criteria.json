@@ -4,25 +4,17 @@
     "weight": 100,
     "subjects": [
       {
-        "subject_name": "semana_1",
-        "weight": 30,
+        "subject_name": "content_and_style",
+        "weight": 50,
         "subjects": [
           {
             "subject_name": "html",
             "weight": 60,
             "subjects": [
               {
-                "subject_name": "structure",
+                "subject_name": "layout_tags",
                 "weight": 40,
                 "tests": [
-                  {
-                    "file": "submission/index.html",
-                    "name": "has_tag",
-                    "parameters": [
-                      { "name": "tag", "value": "body" },
-                      { "name": "required_count", "value": 1 }
-                    ]
-                  },
                   {
                     "file": "submission/index.html",
                     "name": "has_tag",
@@ -62,15 +54,43 @@
                       { "name": "tag", "value": "footer" },
                       { "name": "required_count", "value": 1 }
                     ]
+                  }
+                ]
+              },
+              {
+                "subject_name": "basic_structure",
+                "weight": 20,
+                "tests": [
+                  {
+                    "file": "submission/index.html",
+                    "name": "has_tag",
+                    "parameters": [
+                      { "name": "tag", "value": "body" },
+                      { "name": "required_count", "value": 1 }
+                    ]
                   },
                   {
                     "file": "submission/index.html",
                     "name": "has_tag",
                     "parameters": [
-                      { "name": "tag", "value": "div" },
+                      { "name": "tag", "value": "head" },
                       { "name": "required_count", "value": 1 }
                     ]
                   },
+                  {
+                    "file": "submission/index.html",
+                    "name": "has_tag",
+                    "parameters": [
+                      { "name": "tag", "value": "title" },
+                      { "name": "required_count", "value": 1 }
+                    ]
+                  }
+                ]
+              },
+              {
+                "subject_name": "functional_elements",
+                "weight": 20,
+                "tests": [
                   {
                     "file": "submission/index.html",
                     "name": "has_tag",
@@ -94,14 +114,6 @@
                       { "name": "tag", "value": "button" },
                       { "name": "required_count", "value": 1 }
                     ]
-                  },
-                  {
-                    "file": "submission/index.html",
-                    "name": "has_attribute",
-                    "parameters": [
-                      { "name": "attribute", "value": "class" },
-                      { "name": "required_count", "value": 3 }
-                    ]
                   }
                 ]
               },
@@ -123,7 +135,7 @@
             "subjects": [
               {
                 "subject_name": "responsivity",
-                "weight": 50,
+                "weight": 30,
                 "tests": [
                   {
                     "file": "submission/styles.css",
@@ -194,6 +206,36 @@
                       { "name": "style", "value": "padding" },
                       { "name": "count", "value": 1 }
                     ]
+                  },
+                  {
+                    "file": "submission/styles.css",
+                    "name": "has_style",
+                    "parameters": [
+                      { "name": "style", "value": "width" },
+                      { "name": "count", "value": 1 }
+                    ]
+                  }
+                ]
+              },
+              {
+                "subject_name": "basic_selectors",
+                "weight": 20,
+                "tests": [
+                  {
+                    "file": "submission/index.html",
+                    "name": "has_attribute",
+                    "parameters": [
+                      { "name": "attribute", "value": "class" },
+                      { "name": "required_count", "value": 3 }
+                    ]
+                  },
+                  {
+                    "file": "submission/index.html",
+                    "name": "has_attribute",
+                    "parameters": [
+                      { "name": "attribute", "value": "id" },
+                      { "name": "required_count", "value": 3 }
+                    ]
                   }
                 ]
               }
@@ -202,11 +244,57 @@
         ]
       },
       {
-        "subject_name": "semana_2",
+        "subject_name": "interactive_page",
         "weight": 30,
         "subjects": [
           {
-            "subject_name": "bootstrap_fundamentals",
+            "subject_name": "DOM_js",
+            "weight": 70,
+            "tests": [
+              {
+                "file": "submission/app.js",
+                "name": "js_uses_dom_manipulation",
+                "parameters": [
+                  {
+                    "name": "methods",
+                    "value": [
+                      "createElement",
+                      "appendChild",
+                      "innerHTML",
+                      "querySelector"
+                    ]
+                  },
+                  { "name": "required_count", "value": 4 }
+                ]
+              },
+              {
+                "file": "submission/app.js",
+                "name": "js_uses_query_string_parsing"
+              }
+            ]
+          },
+          {
+            "subject_name": "linking_and_integrity",
+            "weight": 30,
+            "tests": [
+              {
+                "file": "all",
+                "name": "has_no_js_framework",
+                "parameters": [
+                  { "name": "html_file", "value": "submission/index.html" },
+                  { "name": "js_file", "value": "submission/app.js" }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "subject_name": "best_pratices",
+        "weight": 20,
+        "subjects": [
+          {
+            "subject_name": "css_best_pratices",
             "weight": 70,
             "tests": [
               {
@@ -245,33 +333,9 @@
             ]
           },
           {
-            "subject_name": "css_and_docs",
+            "subject_name": "project_structure",
             "weight": 30,
             "tests": [
-              {
-                "file": "submission/styles.css",
-                "name": "has_style",
-                "parameters": [
-                  { "name": "style", "value": "margin" },
-                  { "name": "count", "value": 1 }
-                ]
-              },
-              {
-                "file": "submission/styles.css",
-                "name": "has_style",
-                "parameters": [
-                  { "name": "style", "value": "padding" },
-                  { "name": "count", "value": 1 }
-                ]
-              },
-              {
-                "file": "submission/styles.css",
-                "name": "has_style",
-                "parameters": [
-                  { "name": "style", "value": "width" },
-                  { "name": "count", "value": 1 }
-                ]
-              },
               {
                 "file": "all",
                 "name": "check_project_structure",
@@ -281,51 +345,53 @@
                     "value": "submission/README.md"
                   }
                 ]
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "subject_name": "semana_3",
-        "weight": 40,
-        "subjects": [
-          {
-            "subject_name": "dynamic_js",
-            "weight": 70,
-            "tests": [
-              {
-                "file": "submission/app.js",
-                "name": "js_uses_dom_manipulation",
-                "parameters": [
-                  {
-                    "name": "methods",
-                    "value": [
-                      "createElement",
-                      "appendChild",
-                      "innerHTML",
-                      "querySelector"
-                    ]
-                  },
-                  { "name": "required_count", "value": 4 }
-                ]
               },
               {
-                "file": "submission/app.js",
-                "name": "js_uses_query_string_parsing"
+                "file": "all",
+                "name": "check_project_structure",
+                "parameters": [
+                  {
+                    "name": "expected_structure",
+                    "value": "submission/app.js"
+                  },
+                  {
+                    "name": "expected_structure",
+                    "value": "submission/index.html"
+                  },
+                  {
+                    "name": "expected_structure",
+                    "value": "submission/styles.css"
+                  }
+                ]
               }
             ]
           },
           {
-            "subject_name": "linking_and_integrity",
+            "subject_name": "SEO_best_pratices",
             "weight": 30,
             "tests": [
               {
-                "file": "all",
-                "name": "has_no_js_framework",
+                "file": "submission/index.html",
+                "name": "has_attribute",
                 "parameters": [
-                  { "name": "html_file", "value": "submission/index.html" },
-                  { "name": "js_file", "value": "submission/app.js" }
+                  { "name": "attribute", "value": "author" },
+                  { "name": "required_count", "value": 1 }
+                ]
+              },
+              {
+                "file": "submission/index.html",
+                "name": "has_attribute",
+                "parameters": [
+                  { "name": "attribute", "value": "description" },
+                  { "name": "required_count", "value": 1 }
+                ]
+              },
+              {
+                "file": "submission/index.html",
+                "name": "has_attribute",
+                "parameters": [
+                  { "name": "attribute", "value": "keywords" },
+                  { "name": "required_count", "value": 1 }
                 ]
               }
             ]
