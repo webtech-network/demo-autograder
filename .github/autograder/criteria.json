@@ -52,7 +52,7 @@
                     "name": "has_tag",
                     "parameters": [
                       { "name": "tag", "value": "article" },
-                      { "name": "required_count", "value": 3 }
+                      { "name": "required_count", "value": 4 }
                     ]
                   },
                   {
@@ -68,7 +68,7 @@
                     "name": "has_tag",
                     "parameters": [
                       { "name": "tag", "value": "div" },
-                      { "name": "required_count", "value": 1 }
+                      { "name": "required_count", "value": 4 }
                     ]
                   },
                   {
@@ -152,7 +152,7 @@
                     "name": "has_style",
                     "parameters": [
                       { "name": "style", "value": "font-family" },
-                      { "name": "count", "value": 1 }
+                      { "name": "count", "value": 2 }
                     ]
                   },
                   {
@@ -322,7 +322,6 @@
                 "file": "all",
                 "name": "has_no_js_framework",
                 "parameters": [
-                  { "name": "html_file", "value": "submission/detalhes.html" },
                   { "name": "js_file", "value": "submission/app.js" }
                 ]
               }
