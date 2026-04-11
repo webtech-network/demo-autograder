@@ -9,6 +9,11 @@
 ---
 ## ✅ Essential Requirements
 
+### 🧪 js_uses_query_string_parsing ❌
+- 📁 **File:** `submission/app.js`
+- 🔴 **Score:** 0.0/100
+- 💬 **Error:** The logic to read URL parameters (e.g., URLSearchParams) was not found in your JavaScript.
+
 ### 🧪 has_class ❌
 - 📁 **File:** `submission/index.html`
 - 🔴 **Score:** 0.0/100
@@ -32,12 +37,6 @@
 - ⚙️ **Parameters:** `style=font-family, required_count=2`
 - 💬 **Error:** Found 1 of 2 `font-family` styling rules.
 
-### 🧪 has_attribute ❌
-- 📁 **File:** `submission/index.html`
-- 🟡 **Score:** 66.0/100
-- ⚙️ **Parameters:** `attribute=class, required_count=3`
-- 💬 **Error:** The attribute `class` was found 2 time(s) out of 3 required.
-
 ### 🧪 has_tag ❌
 - 📁 **File:** `submission/index.html`
 - 🟡 **Score:** 75.0/100
@@ -47,4 +46,4 @@
 ---
 ## Final Score
 
-> **86.68 / 100**
+> **73.05 / 100**
