@@ -3,8 +3,8 @@
 ---
 ## GRADING SUMMARY
 - 📊 **Tests:** 35 total  
-  - ✅ 26 passed  
-  - ❌ 9 failed
+  - ✅ 25 passed  
+  - ❌ 10 failed
 
 ---
 ## ✅ Essential Requirements
@@ -49,6 +49,12 @@
 - ⚙️ **Parameters:** `attribute=, required_count=1`
 - 💬 **Error:** The attribute `` was found 0 time(s) out of 1 required.
 
+### 🧪 has_attribute ❌
+- 📁 **File:** `submission/index.html`
+- 🟡 **Score:** 66.0/100
+- ⚙️ **Parameters:** `attribute=class, required_count=3`
+- 💬 **Error:** The attribute `class` was found 2 time(s) out of 3 required.
+
 ### 🧪 has_style ❌
 - 📁 **File:** `submission/styles.css`
 - 🔴 **Score:** 50.0/100
@@ -64,4 +70,4 @@
 ---
 ## Final Score
 
-> **74.76 / 100**
+> **74.08 / 100**
