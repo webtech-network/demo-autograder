@@ -2,8 +2,8 @@
 
 ---
 ## GRADING SUMMARY
-- 📊 **Tests:** 32 total  
-  - ✅ 26 passed  
+- 📊 **Tests:** 31 total  
+  - ✅ 25 passed  
   - ❌ 6 failed
 
 ---
