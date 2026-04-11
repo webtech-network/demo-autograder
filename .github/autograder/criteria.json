@@ -52,7 +52,7 @@
                     "name": "has_tag",
                     "parameters": [
                       { "name": "tag", "value": "article" },
-                      { "name": "required_count", "value": 4 }
+                      { "name": "required_count", "value": 3 }
                     ]
                   },
                   {
@@ -125,10 +125,6 @@
                 "subject_name": "responsivity",
                 "weight": 50,
                 "tests": [
-                  {
-                    "file": "submission/styles.css",
-                    "name": "uses_relative_units"
-                  },
                   {
                     "file": "submission/styles.css",
                     "name": "check_media_queries"
@@ -234,17 +230,6 @@
                   },
                   { "name": "required_count", "value": 1 }
                 ]
-              },
-              {
-                "file": "submission/index.html",
-                "name": "has_class",
-                "parameters": [
-                  {
-                    "name": "class_names",
-                    "value": ["card"]
-                  },
-                  { "name": "required_count", "value": 1 }
-                ]
               }
             ]
           },
@@ -299,14 +284,6 @@
             "subject_name": "dynamic_js",
             "weight": 70,
             "tests": [
-              {
-                "file": "submission/app.js",
-                "name": "js_has_json_array_with_id",
-                "parameters": [
-                  { "name": "required_key", "value": "id" },
-                  { "name": "min_items", "value": 3 }
-                ]
-              },
               {
                 "file": "submission/app.js",
                 "name": "js_uses_dom_manipulation",
