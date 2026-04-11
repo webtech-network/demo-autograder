@@ -2,24 +2,40 @@
 
 ---
 ## GRADING SUMMARY
-- 📊 **Tests:** 32 total  
-  - ✅ 29 passed  
-  - ❌ 3 failed
+- 📊 **Tests:** 33 total  
+  - ✅ 27 passed  
+  - ❌ 6 failed
 
 ---
 ## ✅ Essential Requirements
 
-### 🧪 has_tag ❌
+### 🧪 has_class ❌
 - 📁 **File:** `submission/index.html`
-- 🔴 **Score:** 25.0/100
-- ⚙️ **Parameters:** `tag=div, required_count=4`
-- 💬 **Error:** Found 1 of 4 required `<div>` tags.
+- 🔴 **Score:** 0.0/100
+- ⚙️ **Parameters:** `class_names=['card'], required_count=1`
+- 💬 **Error:** Found 0 of 1 required CSS classes. Classes found: []
+
+### 🧪 check_media_queries ❌
+- 📁 **File:** `submission/styles.css`
+- 🔴 **Score:** 0.0/100
+- 💬 **Error:** No use of media queries was found in your CSS.
+
+### 🧪 check_media_queries ❌
+- 📁 **File:** `submission/styles.css`
+- 🔴 **Score:** 0.0/100
+- 💬 **Error:** No use of media queries was found in your CSS.
 
 ### 🧪 has_style ❌
 - 📁 **File:** `submission/styles.css`
 - 🔴 **Score:** 50.0/100
 - ⚙️ **Parameters:** `style=font-family, required_count=2`
 - 💬 **Error:** Found 1 of 2 `font-family` styling rules.
+
+### 🧪 has_attribute ❌
+- 📁 **File:** `submission/index.html`
+- 🟡 **Score:** 66.0/100
+- ⚙️ **Parameters:** `attribute=class, required_count=3`
+- 💬 **Error:** The attribute `class` was found 2 time(s) out of 3 required.
 
 ### 🧪 has_tag ❌
 - 📁 **File:** `submission/index.html`
@@ -30,4 +46,4 @@
 ---
 ## Final Score
 
-> **98.48 / 100**
+> **87.13 / 100**
