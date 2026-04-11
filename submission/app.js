@@ -40,8 +40,6 @@ const dados = [
 document.addEventListener("DOMContentLoaded", () => {
   if (document.getElementById("noticias-container")) {
     carregarNoticiasHome();
-  } else if (document.getElementById("detalhe-noticia-container")) {
-    carregarDetalheNoticia();
   }
 });
 
@@ -66,30 +64,4 @@ function carregarNoticiasHome() {
     card.appendChild(link);
     container.appendChild(card);
   });
-}
-
-function carregarDetalheNoticia() {
-  const container = document.querySelector("#detalhe-noticia-container");
-
-  const params = new URLSearchParams(window.location.search);
-  const noticiaId = parseInt(params.get("id"));
-
-  if (noticiaId) {
-    const noticia = dados.find((item) => item.id === noticiaId);
-
-    if (noticia) {
-      container.innerHTML = `
-                <h2>${noticia.titulo}</h2>
-                <img src="${noticia.imagem}" alt="Imagem da notícia: ${noticia.titulo}">
-                <p class="conteudo-completo">${noticia.conteudo}</p>
-                <div class="meta-info">
-                    <span><strong>Autor:</strong> ${noticia.autor}</span>
-                    <span><strong>Data:</strong> ${new Date(noticia.data).toLocaleDateString()}</span>
-                    <span><strong>Categoria:</strong> ${noticia.categoria}</span>
-                </div>
-            `;
-    } else {
-      container.innerHTML = "<p>Notícia não encontrada.</p>";
-    }
-  }
 }
