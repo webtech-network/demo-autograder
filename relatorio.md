@@ -34,20 +34,20 @@
 ### 🧪 has_attribute ❌
 - 📁 **File:** `submission/index.html`
 - 🔴 **Score:** 0.0/100
-- ⚙️ **Parameters:** `attribute=author, required_count=1`
-- 💬 **Error:** The attribute `author` was found 0 time(s) out of 1 required.
+- ⚙️ **Parameters:** `attribute=, required_count=1`
+- 💬 **Error:** The attribute `` was found 0 time(s) out of 1 required.
 
 ### 🧪 has_attribute ❌
 - 📁 **File:** `submission/index.html`
 - 🔴 **Score:** 0.0/100
-- ⚙️ **Parameters:** `attribute=description, required_count=1`
-- 💬 **Error:** The attribute `description` was found 0 time(s) out of 1 required.
+- ⚙️ **Parameters:** `attribute=, required_count=1`
+- 💬 **Error:** The attribute `` was found 0 time(s) out of 1 required.
 
 ### 🧪 has_attribute ❌
 - 📁 **File:** `submission/index.html`
 - 🔴 **Score:** 0.0/100
-- ⚙️ **Parameters:** `attribute=keywords, required_count=1`
-- 💬 **Error:** The attribute `keywords` was found 0 time(s) out of 1 required.
+- ⚙️ **Parameters:** `attribute=, required_count=1`
+- 💬 **Error:** The attribute `` was found 0 time(s) out of 1 required.
 
 ### 🧪 has_style ❌
 - 📁 **File:** `submission/styles.css`
