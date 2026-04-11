@@ -2,9 +2,9 @@
 
 ---
 ## GRADING SUMMARY
-- 📊 **Tests:** 31 total  
-  - ✅ 25 passed  
-  - ❌ 6 failed
+- 📊 **Tests:** 35 total  
+  - ✅ 26 passed  
+  - ❌ 9 failed
 
 ---
 ## ✅ Essential Requirements
@@ -31,6 +31,24 @@
 - ⚙️ **Parameters:** `expected_structure=submission/README.md`
 - 💬 **Error:** The file 'submission/README.md' does not exist.
 
+### 🧪 has_attribute ❌
+- 📁 **File:** `submission/index.html`
+- 🔴 **Score:** 0.0/100
+- ⚙️ **Parameters:** `attribute=author, required_count=1`
+- 💬 **Error:** The attribute `author` was found 0 time(s) out of 1 required.
+
+### 🧪 has_attribute ❌
+- 📁 **File:** `submission/index.html`
+- 🔴 **Score:** 0.0/100
+- ⚙️ **Parameters:** `attribute=description, required_count=1`
+- 💬 **Error:** The attribute `description` was found 0 time(s) out of 1 required.
+
+### 🧪 has_attribute ❌
+- 📁 **File:** `submission/index.html`
+- 🔴 **Score:** 0.0/100
+- ⚙️ **Parameters:** `attribute=keywords, required_count=1`
+- 💬 **Error:** The attribute `keywords` was found 0 time(s) out of 1 required.
+
 ### 🧪 has_style ❌
 - 📁 **File:** `submission/styles.css`
 - 🔴 **Score:** 50.0/100
@@ -46,4 +64,4 @@
 ---
 ## Final Score
 
-> **73.05 / 100**
+> **74.76 / 100**
